@@ -1,9 +1,10 @@
+import os
 from flask import Flask, render_template, url_for, flash, redirect
 import requests
 from forms import RegistrationForm, LoginForm
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'dda9ef6c9d5fe05cf849ab19d1b478cd'
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'default_key_if_missing')
 
 
 @app.route('/')
