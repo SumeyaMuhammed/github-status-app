@@ -35,6 +35,15 @@
     {% endif %}
   </head>
   <body>
+    <header id="header">
+            <img
+              class="statimg"
+              src="/static/images/1f4ca.png"
+              alt="logo"
+              width="35px"
+            />
+            <h2>Github Stats Viewer</h2>
+          </header>
     <div class="container">
       {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
