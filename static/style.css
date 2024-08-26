@@ -14,24 +14,25 @@ h3 {
   color: #00bfa5;
 }
 
-.header,
+#header,
 .footer {
   background-color: #21232b;
   padding: 20px;
 }
 
-.heading {
+/* .heading {
   padding: 20px;
-}
+} */
 
-.textstuff .gif {
+#header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.textstuff h2 {
+#header h2 {
   margin-left: 10px;
+  margin-top: 5px;
 }
 
 .search-section {
@@ -199,6 +200,10 @@ a:hover {
   font-size: 24px;
 }
 
+.whole-form {
+  width: 500px;
+  margin: 10px auto;
+}
 @media screen and (max-width: 720px) {
   .profile-chart {
     width: 80%;
@@ -249,5 +254,9 @@ a:hover {
   .social-icons a {
     margin-left: 10px;
     font-size: 20px;
+  }
+
+  .whole-form {
+    width: 80%;
   }
 }
