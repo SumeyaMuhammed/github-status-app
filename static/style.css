@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: black;
+  background-color: #1e2a38;
   color: #f0f0f0;
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -128,7 +128,6 @@ h3 {
   margin: 0;
   font-size: 24px;
   font-weight: bold;
-  color: #ffffff;
 }
 
 .stat-text p {
