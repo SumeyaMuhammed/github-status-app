@@ -3,16 +3,18 @@
     <!-- Search place -->
   <section class="search-section">
     <!-- class name was res -->
-    <div class="searchbar">
+    <form id="searchbar" action="/" method="post">
       <input
         type="text"
         name="search"
         class="search"
-        id="search"
+        id="Username"
         placeholder="Enter GitHub Username"
       />
-      <button onclick="Search()" id="searchbutton">Search</button>
-    </div>
+      <button type="submit" onclick="Search()" id="searchbutton">Search</button>
+    </form>
+    <ul id="repoList"></ul>
+
 </section>
 
     <!-- Username Result -->
