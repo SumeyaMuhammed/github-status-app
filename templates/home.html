@@ -6,7 +6,7 @@
     <form id="searchbar" action="/" method="post">
       <input
         type="text"
-        name="search"
+        name="username"
         class="search"
         id="Username"
         placeholder="Enter GitHub Username"
@@ -45,7 +45,7 @@
                 <i class="fas fa-book"></i>
               </div>
               <div class="stat-text">
-                <h2></h2>
+                <h2>{{ repos_count }}</h2>
                 <p>Repos</p>
               </div>
             </div>
@@ -54,7 +54,7 @@
                 <i class="fas fa-users"></i>
               </div>
               <div class="stat-text">
-                <h2></h2>
+                <h2>{{ followers_count }}</h2>
                 <p>Followers</p>
               </div>
             </div>
@@ -63,7 +63,7 @@
                 <i class="fas fa-user-plus"></i>
               </div>
               <div class="stat-text">
-                <h2></h2>
+                <h2>{{ following_count }}</h2>
                 <p>Following</p>
               </div>
             </div>
@@ -72,7 +72,7 @@
                   <i class="fas fa-code"></i>
                 </div>
                 <div class="stat-text">
-                  <h2></h2>
+                  <h2>{{ gists_count }}</h2>
                   <p>Gists</p>
                 </div>
               </div>
