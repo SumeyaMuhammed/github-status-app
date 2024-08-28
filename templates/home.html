@@ -1,6 +1,6 @@
 {% extends "layout.html" %} {% block content %}
 <main>
-    <!-- Search place -->
+  <!-- Search place -->
   <section class="search-section">
     <!-- class name was res -->
     <form id="searchbar" action="/" method="post">
@@ -9,105 +9,104 @@
         name="username"
         class="search"
         id="Username"
+        value="{{username}}"
         placeholder="Enter GitHub Username"
       />
       <button type="submit" onclick="Search()" id="searchbutton">Search</button>
     </form>
-    <ul id="repoList"></ul>
+  </section>
 
-</section>
-
-    <!-- Username Result -->
+  <!-- Username Result -->
   <section id="results" class="results-section">
-    <h2 id="name">Default title</h2>
-
+    {% if name %}
+    <h2>{{ name }}</h2>
+    {% else %} {% endif %}
+    <h4>@{{ login_name }}</h4>
     <!-- User Profile -->
-        <div class="profilegit">
-          <h2 id="name"></h2>
-          <p id="Username"></p>
-          <p id="bio"></p>
-          <p id="createdate"></p>
+    <div class="profilegit">
+      <h2 id="name"></h2>
+      <p id="Username"></p>
+      <p id="bio"></p>
+      <p id="createdate"></p>
+    </div>
+
+    <!-- User Contribution chart -->
+    <div class="contribution">
+      <img
+        class="profile-chart"
+        src="https://ghchart.rshah.org/00dd00/SumeyaMuhammed"
+        alt="GitHub contributions chart"
+      />
+    </div>
+
+    <!-- User Profile Insights -->
+    <div class="stats-container">
+      <div class="stat-item">
+        <div class="stat-icon" style="background-color: #fbcfe8">
+          <i class="fas fa-book"></i>
         </div>
-
-        <!-- User Contribution chart -->
-        <div class="contribution">
-            <img
-          class="profile-chart"
-          src="https://ghchart.rshah.org/00dd00/SumeyaMuhammed"
-          alt="GitHub contributions chart"
-        />
+        <div class="stat-text">
+          <h2>{{ repos_count }}</h2>
+          <p>Repos</p>
         </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon" style="background-color: #ccfbf1">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="stat-text">
+          <h2>{{ followers_count }}</h2>
+          <p>Followers</p>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon" style="background-color: #ede9fe">
+          <i class="fas fa-user-plus"></i>
+        </div>
+        <div class="stat-text">
+          <h2>{{ following_count }}</h2>
+          <p>Following</p>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon" style="background-color: #fef3c7">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="stat-text">
+          <h2>{{ gists_count }}</h2>
+          <p>Gists</p>
+        </div>
+      </div>
+    </div>
 
-        <!-- User Profile Insights -->
-        <div class="stats-container">
-            <div class="stat-item">
-              <div class="stat-icon" style="background-color: #fbcfe8">
-                <i class="fas fa-book"></i>
-              </div>
-              <div class="stat-text">
-                <h2>{{ repos_count }}</h2>
-                <p>Repos</p>
-              </div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon" style="background-color: #ccfbf1">
-                <i class="fas fa-users"></i>
-              </div>
-              <div class="stat-text">
-                <h2>{{ followers_count }}</h2>
-                <p>Followers</p>
-              </div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-icon" style="background-color: #ede9fe">
-                <i class="fas fa-user-plus"></i>
-              </div>
-              <div class="stat-text">
-                <h2>{{ following_count }}</h2>
-                <p>Following</p>
-              </div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-icon" style="background-color: #fef3c7">
-                  <i class="fas fa-code"></i>
-                </div>
-                <div class="stat-text">
-                  <h2>{{ gists_count }}</h2>
-                  <p>Gists</p>
-                </div>
-              </div>
-            </div>
+    <!-- User Detailed Information -->
+    <div class="stat-boxes">
+      <div class="stat-box">
+        <h3>User Statistics</h3>
 
-            <!-- User Detailed Information -->
-            <div class="stat-boxes">
-                <div class="stat-box">
-                  <h3>User Statistics</h3>
-      
-                  <iframe
-                    id="stat"
-                    src="https://github-readme-stats.vercel.app/api?username=SumeyaMuhammed&theme=react&show_icons=true&hide_border=true&count_private=true"
-                    title="github stats"
-                  ></iframe>
-                </div>
-                <div class="stat-box">
-                  <h3>Contribution Streaks</h3>
-                  <iframe
-                    id="streak"
-                    src="https://streak-stats.demolab.com?user=SumeyaMuhammed&theme=react&show_icons=true&hide_border=true&count_private=true"
-                    title="github stats"
-                  ></iframe>
-                </div>
-                <div class="stat-box">
-                  <h3>Most Used Languages</h3>
-                  <iframe
-                    id="languse"
-                    src="https://github-readme-stats.vercel.app/api/top-langs/?username=SumeyaMuhammed&theme=react&show_icons=true&hide_border=true&layout=compact"
-                    title="languages"
-                  ></iframe>
-                </div>
-              </div>
-            </section>
-        </main>
-         
+        <iframe
+          id="stat"
+          src="https://github-readme-stats.vercel.app/api?username=SumeyaMuhammed&theme=react&show_icons=true&hide_border=true&count_private=true"
+          title="github stats"
+        ></iframe>
+      </div>
+      <div class="stat-box">
+        <h3>Contribution Streaks</h3>
+        <iframe
+          id="streak"
+          src="https://streak-stats.demolab.com?user=SumeyaMuhammed&theme=react&show_icons=true&hide_border=true&count_private=true"
+          title="github stats"
+        ></iframe>
+      </div>
+      <div class="stat-box">
+        <h3>Most Used Languages</h3>
+        <iframe
+          id="languse"
+          src="https://github-readme-stats.vercel.app/api/top-langs/?username=SumeyaMuhammed&theme=react&show_icons=true&hide_border=true&layout=compact"
+          title="languages"
+        ></iframe>
+      </div>
+    </div>
+  </section>
 </main>
 {% endblock content %}
