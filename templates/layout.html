@@ -36,13 +36,21 @@
   </head>
   <body>
     <header id="header">
-            <img
-              class="statimg"
-              src="/static/images/1f4ca.png"
-              alt="logo"
-              width="35px"
-            />
-            <h2>Github Stats Viewer</h2>
+      {% if title %}
+      <h2><img
+        class="statimg"
+        src="/static/images/1f4ca.png"
+        alt="logo"
+        width="35px"
+      />Github Stats Viewer<br> <span>{{ title }}</span></h2>
+      {% else %}
+      <h2><img
+        class="statimg"
+        src="/static/images/1f4ca.png"
+        alt="logo"
+        width="35px"
+      />GitHub Stats Viewer</h2>
+      {% endif %}
           </header>
     <div class="container">
       {% with messages = get_flashed_messages(with_categories=true) %}
