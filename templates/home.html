@@ -14,29 +14,29 @@
       />
       <button type="submit" onclick="Search()" id="searchbutton">Search</button>
     </form>
+    <p class="entered_username">{{ username }}</p>
   </section>
 
   <!-- Username Result -->
   <section id="results" class="results-section">
-    {% if name %}
-    <h2>{{ name }}</h2>
-    {% else %} {% endif %}
-    <h4>@{{ login_name }}</h4>
     <!-- User Profile -->
-    <div class="profilegit">
-      <h2 id="name"></h2>
-      <p id="Username"></p>
-      <p id="bio"></p>
-      <p id="createdate"></p>
+    <div class="profile">
+      <div class="avatar">
+        <img src="{{ avatar_url }}" alt="avatar" class="profile-img" />
+      </div>
+      {% if name %}
+      <h2 class="name">{{ name }}</h2>
+      {% else %} {% endif %}
+      <a id="github-link" href="" target="_blank"></a>
+      {% if bio %}
+      <p class="bio">{{ bio }}</p>
+      {% else %} {% endif %}
+      <p id="created-date">account created on : {{ create_date }}</p>
     </div>
-
+    <h2 style="margin: 20px">Stats of {{ username }}</h2>
     <!-- User Contribution chart -->
     <div class="contribution">
-      <img
-        class="profile-chart"
-        src="https://ghchart.rshah.org/00dd00/SumeyaMuhammed"
-        alt="GitHub contributions chart"
-      />
+      <img class="profile-chart" src="{{profile_chart}}" />
     </div>
 
     <!-- User Profile Insights -->
@@ -84,25 +84,17 @@
       <div class="stat-box">
         <h3>User Statistics</h3>
 
-        <iframe
-          id="stat"
-          src="https://github-readme-stats.vercel.app/api?username=SumeyaMuhammed&theme=react&show_icons=true&hide_border=true&count_private=true"
-          title="github stats"
-        ></iframe>
+        <iframe id="stat" src="{{ user_statistics }}"></iframe>
       </div>
       <div class="stat-box">
         <h3>Contribution Streaks</h3>
-        <iframe
-          id="streak"
-          src="https://streak-stats.demolab.com?user=SumeyaMuhammed&theme=react&show_icons=true&hide_border=true&count_private=true"
-          title="github stats"
-        ></iframe>
+        <iframe id="streak" src="{{ streaks }}" title="github stats"></iframe>
       </div>
       <div class="stat-box">
         <h3>Most Used Languages</h3>
         <iframe
-          id="languse"
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=SumeyaMuhammed&theme=react&show_icons=true&hide_border=true&layout=compact"
+          id="language"
+          src="{{ languages_used }}"
           title="languages"
         ></iframe>
       </div>
