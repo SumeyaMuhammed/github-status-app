@@ -12,6 +12,7 @@ body {
 h2,
 h3 {
   color: #00bfa5;
+  font-family: "Poppins", sans-serif;
 }
 
 #header,
@@ -33,6 +34,11 @@ h3 {
 #header h2 {
   margin-left: 10px;
   margin-top: 5px;
+}
+
+span {
+  font-size: 20px;
+  font-style: italic;
 }
 
 .search-section {
@@ -68,7 +74,7 @@ h3 {
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 30%; /* Adapted for smaller screens */
+  width: 30%;
   max-width: 130px;
 }
 
@@ -76,14 +82,65 @@ h3 {
   background-color: #008c7e;
 }
 
+.search-section p {
+  display: none;
+}
+
+.profile {
+  border: 1px solid #333;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: inline-block;
+  margin: 0 auto 10px;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.profile a {
+  font-style: italic;
+  font-size: 18px;
+  color: #00bfa5;
+  opacity: 0.7;
+}
+.profile a:hover {
+  opacity: 0.8;
+  color: #2222e0;
+}
+
+.bio {
+  color: #dcdcdc; /* Light grey color */
+  font-family: "Open Sans", sans-serif; /* Modern font */
+  font-size: 16px; /* Slightly smaller font size */
+  text-align: center;
+  margin-top: 20px;
+}
+
+#created-date {
+  color: #a9a9a9; /* Darker grey color for the date */
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.bio:hover,
+#created-date:hover {
+  color: #ffffff; /* Changes color to white on hover */
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
 .results-section {
-  margin-top: 30px;
+  /* margin-top: 100px; */
   padding: 20px;
 }
 .profile-chart {
   margin-bottom: 5px;
-  /* width: 80%; Making it responsive */
-  height: 100px;
+  height: 130px;
 }
 .stats-container {
   display: flex;
