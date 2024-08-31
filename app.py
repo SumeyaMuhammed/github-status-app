@@ -109,12 +109,12 @@ def register():
     if form.validate_on_submit():
         flash(f'Account created for {form.username.data}!', 'success')
         return redirect(url_for('home'))
-    return render_template('register.html', title='Register', form=form)
+    return render_template('register.html', title='Sign Up', form=form)
 
 @app.route('/login')
 def login():
     form = LoginForm()
-    return render_template('login.html', title='Login', form=form)
+    return render_template('login.html', title='Log In', form=form)
 
 
 if __name__ == '__main__':
