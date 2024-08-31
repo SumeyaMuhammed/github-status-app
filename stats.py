@@ -1,5 +1,6 @@
 from flask import session
 import requests
+from datetime import datetime
 def display(username):
     if username:
 
@@ -18,12 +19,19 @@ def display(username):
             name = user_data.get('name', " ")
             login_name = user_data.get('login', "Error: Followers data not found")
             bio = user_data.get('bio', " ")
-            create_date = user_data.get('created_at', " ")
             profile_chart =f"https://ghchart.rshah.org/0f786a/{username}"
             followers_count = user_data.get('followers', "Error: Followers data not found")
             following_count = user_data.get('following', "Error: Following data not found")
             gists_count = user_data.get('public_gists', "Error: Gists data not found")
             
+            created_date = user_data.get('created_at', " ")
+
+            date_str = created_date.rstrip('Z')
+
+            custom_format = datetime.fromisoformat(date_str)
+            create_date = custom_format.strftime('%d/%m/%Y %H:%M')
+
+
             # Fetch repository data
             repos_response = requests.get(f'https://api.github.com/users/{username}/repos')
             if repos_response.status_code == 200:
