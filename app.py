@@ -25,7 +25,6 @@ def home():
 
     # Retrieve data from session
     name = session.get('name', "N/A")
-
     repos_count = session.get('repos_count', "N/A")
     avatar_url = session.get('avatar_url', "N/A")
     login_name = session.get('login_name', "N/A")
