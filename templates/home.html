@@ -20,25 +20,38 @@
   <section id="results" class="results-section">
     <!-- User Profile -->
     <div class="profile">
+      {% if avatar_url != "N/A" %}
       <div class="avatar">
         <img src="{{ avatar_url }}" alt="avatar" class="profile-img" />
       </div>
-      {% if name %}
+      {% else %} {% endif %} {% if avatar_url != "N/A" %} {% if name %}
       <h2 class="name">{{ name }}</h2>
-      {% else %} {% endif %}
+      {% else %} {% endif %} {% else %} {% endif %} {% if login_name != "N/A" %}
       <a id="github-link" href="" target="_blank"></a>
-      {% if bio %}
+      {% else %}
+      <h3 style="color: #dc143c; font-style: italic">
+        Please Enter Valid Username
+      </h3>
+      {% endif %} {% if avatar_url != "N/A" %} {% if bio %}
       <p class="bio">{{ bio }}</p>
-      {% else %} {% endif %}
+      {% else %} {% endif %} {% else %} {% endif %} {% if create_date != "N/A"
+      %}
       <p id="created-date">account created on : {{ create_date }}</p>
+      {% else %}
+      <p id="created-date"></p>
+      {% endif %}
     </div>
     <h2 style="margin: 20px">Stats of {{ username }}</h2>
+
     <!-- User Contribution chart -->
+    {% if profile_chart != "N/A" %}
     <div class="contribution">
       <img class="profile-chart" src="{{profile_chart}}" />
     </div>
+    {% else %} {% endif %}
 
     <!-- User Profile Insights -->
+    {% if repos_count != "N/A" %}
     <div class="stats-container">
       <div class="stat-item">
         <div class="stat-icon" style="background-color: #fbcfe8">
@@ -77,6 +90,8 @@
         </div>
       </div>
     </div>
+
+    {% else %} {% endif %}
 
     <!-- User Detailed Information -->
     <div class="stat-boxes">
