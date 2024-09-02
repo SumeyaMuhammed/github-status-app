@@ -29,9 +29,7 @@
       {% else %} {% endif %} {% else %} {% endif %} {% if login_name != "N/A" %}
       <a id="github-link" href="" target="_blank"></a>
       {% else %}
-      <h3 style="color: #dc143c; font-style: italic">
-        Please Enter Valid Username
-      </h3>
+      <h3 class="error_message">Please Enter Valid Username</h3>
       {% endif %} {% if avatar_url != "N/A" %} {% if bio %}
       <p class="bio">{{ bio }}</p>
       {% else %} {% endif %} {% else %} {% endif %} {% if create_date != "N/A"
