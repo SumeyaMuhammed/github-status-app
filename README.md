@@ -14,21 +14,21 @@ pip (Python package installer)
 
 ### Instructions
 Clone the repository to your local machine:
-git clone https://github.com/your-username/github-stats-viewer.git
+`git clone https://github.com/your-username/github-stats-viewer.git`
 
 Navigate to the project directory:
-cd github-stats-viewer
+`cd github-stats-viewer`
 
 Create and activate a virtual environment:
-python3 -m venv venv
-source venv/bin/activate  
- `venv\Scripts\activate` 
+`python3 -m venv venv
+source venv/bin/activate`  
+#on windows use `venv\Scripts\activate` 
  
 Install the required dependencies:
-pip install -r new_requirements.txt
+`pip install -r new_requirements.txt`
 
 Run the Flask app:
-python app.py
+`python app.py`
 
 Open your web browser and navigate to:
 http://127.0.0.1:5000
@@ -43,10 +43,10 @@ Most used programming languages
 ## Contributing
 If you would like to contribute to the development of this project:
 Fork the repository
-Create a new branch (git checkout -b feature-branch)
+Create a new branch (`git checkout -b feature-branch`)
 Make your changes
-Commit your changes (git commit -m 'Add feature')
-Push to the branch (git push origin feature-branch)
+Commit your changes (`git commit -m 'Add feature'`)
+Push to the branch (`git push origin feature-branch`)
 Create a new Pull Request
 
 ## Related Projects
@@ -55,4 +55,4 @@ Here are some related GitHub projects that might inspire you:
 [GitHub Streak Stats](https://github.com/DenverCoder1/github-readme-streak-stats)
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License.
