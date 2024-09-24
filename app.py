@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'default_key_if_missing')
 
-DEFAULT_NAME = "sindresorhus"
+DEFAULT_NAME = "dmalan"
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
