@@ -50,8 +50,8 @@ Push to the branch (`git push origin feature-branch`)
 Create a new Pull Request
 
 ## Related Projects
-Here are some related GitHub projects that might inspire you:
-[GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats)
+Here are some related GitHub projects that might inspire you:  
+[GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats)  
 [GitHub Streak Stats](https://github.com/DenverCoder1/github-readme-streak-stats)
 
 ## License
