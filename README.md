@@ -2,7 +2,7 @@
 ## Introduction
 GitHub Stats Viewer is a web application that helps GitHub users easily view their statistics, such as repositories, streaks, and languages used. The app is also useful for employers who want to quickly assess the status and activity of a potential candidate. Built using Flask, HTML, CSS, and JavaScript, this project offers a user-friendly way to visualize GitHub data.
 
-You can check out the live version of the app [here](https://git-status-viewer-production.up.railway.app/).  
+You can check out the live version of the app [here](https://github-status-viewer.vercel.app/).  
 Read the detailed blog about the project [here](https://www.linkedin.com/pulse/github-stats-viewer-my-journey-building-user-friendly-sumeya-muhammed-mne5c/?trackingId=BvG%2F30D4SJG3YrE1Z6YhjA%3D%3D).  
 Connect with me on [LinkedIn](https://www.linkedin.com/in/sumeya-muhammed-a83168319/).
 
